@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Title Here</title>
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            function showDistance(speed=0, time=0) {
+                return speed * time
+            }
+
+            function factorial(value) {
+                if (value > 1)
+                    return factorial(value-1) * value
+                else
+                    return value
+            }
+            
+            function fun() {
+                if (1 == 2) {
+                    return true
+                }
+                else if (2 == 2) {
+                    return '4'
+                }
+                else {
+                    return false
+                }
+            }
+
+            function switch_fun(color) {
+                switch (color) {
+                    case 'red':
+                        alert('red color')
+                        break
+                    case 'yellow':
+                        alert('yellow color')
+                        break
+                    case 'blue':
+                        alert('blue color')
+                        break
+                    default:
+                        alert('hz color')
+                        break
+                }
+            }
+
+            document.writeln('hello')
+            for (let i = 0; i < 10; i++) {
+                document.writeln(factorial(i))
+                if (i > 5) {
+                    break
+                }
+            }
+            for (let i = 'a'; i != 'aaaaa'; i += 'a') {
+                document.write('hmmm')
+            }
+
+            let ii = 0
+            let yay = true
+
+            for (; yay;) {
+                if (ii == 10) {
+                    yay = false
+                } else {
+                    ii++
+                    document.writeln('wieed')
+                }
+            }
+
+            let count = 0 
+            while (count < 10) {
+                document.writeln(count)
+                count++
+            }
+
+            count = 10
+            do {
+                document.writeln('yep')
+                count++
+            } while (count < 10)
+        </script>
+    </body>
+</html>
