@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>16 Numbers</title>
+</head>
+<body>
+  <script>
+    let stooges = 3;
+    let pi = 3.1459;
+    let color = 0xFF;
+    let maaOfEarth = 5.9742e+24;
+
+    let i = 4;
+    let j = i++;
+    console.log('i =',i,'j =',j);
+
+    i = 4;
+    j = ++i;
+    console.log('i =',i,'j =',j);
+
+    let hexValue = parseInt('FFFFF', 16);
+    let octalValue = parseInt('0101', 8);
+    console.log('hex =', hexValue);
+    console.log('bin =', octalValue);
+
+    let myLoveForYou = Infinity * 2;
+
+    pi = Math.PI
+    console.log('PI = ', pi);
+
+    function getCircumference(radius) {
+      return 2 * Math.PI * radius;
+    }
+
+    console.log(getCircumference(5));
+
+    console.log(Math.floor(.5));
+    console.log(Math.ceil(.5));
+    console.log(Math.round(.5));
+
+    console.log(Math.floor(pi));
+    console.log(Math.ceil(pi));
+    console.log(Math.round(pi));
+
+    console.log(Math.random() * 100);
+  </script>
+</body>
+</html>
