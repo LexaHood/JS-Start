@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Vars</title>
+</head>
+<body>
+  <script>
+    let counter = 0
+    document.writeln(counter)
+
+    /* 
+    Если переменную объявить без let, const, то это делает
+    переменную глобальной.
+    */
+
+    function setState() {
+      state = 'on'
+    }
+    setState()
+    alert(state)
+
+    /* 
+    () => {
+      ...
+      блок кода
+      любая премененная обявленная внутри
+      блока кода с помощью let, const.
+      Является переменной этого блока.
+      ...
+    }
+    */
+    let foo = 'foo'
+    document.writeln(foo)
+
+    document,writeln(foo_2)
+    let foo_2 = 'foo_2'
+
+    alert(foo_3)
+    var foo_3 = 'foo_3'
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Taimers
+    </title>
+  </head>
+  <body>
+    <script>
+      // alert('asa')
+      document.writeln('colbnassa')
+      /*
+        Функция setTimeout позволяет откладывать выполенение заданного
+        кода.
+        Этой функцией мы можем обозначить, какой код выполнять и сколько
+        миллисекунд должно пройти, прежде чем это выполнение произойдет
+      */
+      //let timeoutID = setTimeout(someFunction, delayInMilliseconds)
+
+      function showAlert() {
+        alert('moo!')
+      }
+      // let timeoutID = setTimeout(document.writeln('asas'), 3000)
+      let timeoutID = setTimeout(showAlert, 2000)
+      clearTimeout(timeoutID)
+
+
+      // ------------------------------------------------
+
+
+      /* 
+       setInterval - похожа на setTimeout, но выполняет код повторно
+       через заданный интервал времени.
+      */
+      //let intervaID = setInterval(someFunction, interval);
+      let thingToPrint = ""
+
+      function drawText() {
+        thingToPrint += "#"
+        document.writeln(thingToPrint)
+      }
+
+      let intervalID = setInterval(drawText, 100);
+      clearInterval(intervalID)
+
+
+      // ------------------------------------------------
+
+
+      /*
+       requestAnimationFrame - нужна для синхронизации кода события
+       перерисовки содержимого бразуера.
+       Оптимальна для отрисовкм анимациии со скоростью 60 кадров
+      */
+      // let requestID = requestAnumationFrame(someFunction)
+
+      function animationloop() {
+        // код, отвечающий за анимацию
+        requestAnimationFrame(animationloop)
+      }
+
+      // Начать выполнение цикла анимации!
+      animationloop()
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function calcArea(length, width) {
+      return length * width
+    }
+    let roomArea = calcArea(10, 10)
+    alert(roomArea)
+
+    // ---------------------------
+
+    function sayGoodBay() {
+      alert('GoodBay')
+
+      function sayHello() {
+        alert("Hello")
+      }
+      return sayHello
+    }
+
+    let something = sayGoodBay()
+    something()
+
+
+    // ---------------------------
+    function stopWatch() {
+      let startTime = Date.now()
+
+      function getDelay() {
+        let elapsedTime = Date.now() - startTime
+        document.writeln(elapsedTime, ' milisec')
+      }
+      return getDelay
+    }
+
+    let timer = stopWatch()
+    for (let i = 0; i < 10000000; i++) {
+      let temp = Math.random() * i
+    }
+    timer()
+    /* 
+     Внешняя функция больше не действует, и переменная
+      startTime привязывавется к функции getDelay
+    */
+   // Замыкание = функция + внешний контекст
+  </script>
+</body>
+</html>
