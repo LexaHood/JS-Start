@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20 Class</title>
+</head>
+<body>
+  <script>
+    class Planet {
+      constructor(name = 'Default', radius = 1500) {
+        this.name = name;
+        this.radius = radius;
+      }
+
+      getSurfaceArea() {
+        let surfaceArea = 4 * Math.PI * Math.pow(this.radius, 2);
+        console.log(surfaceArea + " square km!");
+        return surfaceArea;
+      }
+
+      set gravity(value) {
+        console.log('Setting value');
+        this._gravity = value;
+      }
+
+      get gravity() {
+        console.log('Getting value');
+        return this._gravity;
+      }
+    }
+
+    let myPlanet = new Planet(); 
+    console.log(myPlanet.name);
+    
+    myPlanet = new Planet('Earth', 6378)
+    console.log(myPlanet.name);
+    myPlanet.getSurfaceArea()
+
+    function PlanetToo(name = 'DefaultToo', radius = 1500) {
+      this.name = name;
+      this.radius = radius;
+    };
+
+    myPlanet = new PlanetToo();
+    console.log(myPlanet.name);
+
+    class PotatoPlanet extends Planet  {
+      constructor(name, width, potatoType) {
+        super(name, width);
+        this.potatoType = potatoType;
+      }
+
+      getPotatoType() {
+        var thePotato = this.potatoType.toUpperCase() + "!!!!!";
+        console.log(thePotato);
+        return thePotato;
+      }
+    }
+
+    let sputnik = new PotatoPlanet("Sputnik", 12411, "Russet");
+    sputnik.gravity = 42.1;
+    sputnik.getPotatoType();
+  </script>
+</body>
+</html>

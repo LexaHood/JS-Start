@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21 Logical types</title>
+</head>
+<body>
+  <script>
+    let sunny = false;
+    let traffic = true;
+
+    let boolObject = new Boolean(false);
+    let anotherBool = new Boolean(true);
+
+    // let boolObject2 = new Boolean(< arbitrary expression >);
+    
+    function theSolution(answer) {
+      if (answer == 42) {
+        console.log('Eah');
+      } else {
+        console.log('Nope');
+      }
+    }
+
+    theSolution('42')
+    theSolution(42)
+
+    function theSolution2(answer) {
+      if (answer === 42) {
+        console.log('Eah2');
+      } else {
+        console.log('Nope2');
+      }
+    }
+
+    theSolution2('42')
+    theSolution2(42)
+
+    console.log(new String('A') == new String('A'));
+    console.log([1, 2, 3] == [1, 2, 3]);
+    console.log({ a: 1 } == { a: 1 });
+
+    console.log(new String('A') === new String('A'));
+    console.log([1, 2, 3] === [1, 2, 3]);
+    console.log({ a: 1 } === { a: 1 });
+  </script>
+</body>
+</html>
