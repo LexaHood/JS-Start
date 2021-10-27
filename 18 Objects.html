@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18 Object</title>
+</head>
+<body>
+  <script>
+    let funnyGuy = {
+      _popa: 1
+    };
+
+    funnyGuy.firstName = 'Conan';
+    console.log(funnyGuy.firstName);
+
+    funnyGuy.latstName = 'Doal'
+    delete funnyGuy.latstName
+
+    console.log(funnyGuy.valueOf());
+    
+    let person = {
+      getName: function () {
+        return 'The name is ' + this.firstName + " " + this.lastName;
+      },
+      getInitials: function () {
+        if (this.firstName && this.lastName) {
+          return this.firstName[0] + this.lastName[0];
+        }
+      }
+    };
+
+    let funnyGuy2 = Object.create(person);
+    funnyGuy2.firstName = 'Conan';
+    funnyGuy2.lastName = "O'Brien";
+
+    let theDude = Object.create(person);
+    theDude.firstName = 'Jeffrey';
+    theDude.lastName = 'Lebowski';
+
+    console.log(funnyGuy2.getName());
+  </script>
+</body>
+</html>

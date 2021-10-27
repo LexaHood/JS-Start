@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19 Extension <object data="" type=""></object></title>
+</head>
+<body>
+  <script>
+    function shuffle(input) {
+      for (let i = input.length - 1; i >= 0 ; i--) {
+        let randomIndex = Math.floor(Math.random() * (i + 1));
+        let itemAtIndex = input[randomIndex];
+
+        input[randomIndex] = input[i];
+        input[i] = itemAtIndex;
+      }
+      return input;
+    }
+
+    let shuffleArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    shuffle(shuffleArray)
+
+    console.log(shuffleArray)
+
+    Array.prototype.shuffle = function () {
+      let input = this;
+
+      for (let i = input.length - 1; i >= 0; i--) {
+        let randomIndex = Math.floor(Math.random() * (i + 1));
+        let itemAtIndex = input[randomIndex];
+
+        input[randomIndex] = input[i];
+        input[i] = itemAtIndex;
+      }
+      return input;
+    }
+
+    let numbers = [1, 2, 3, 4, 5, 6, 7 ,8 , 9, 10, 11, 12, 13, 14, 15]
+    console.log(numbers.shuffle());
+  </script>
+</body>
+</html>
